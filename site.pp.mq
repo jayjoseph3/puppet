@@ -8,7 +8,7 @@ class { '::rabbitmq':
 }
 rabbitmq_user{'joe':
 	admin => true,
-	password => 'kerangga',
+	password => 'password',
 }
 rabbitmq_plugin{'rabbitmq_stomp':
 	ensure =>present,
