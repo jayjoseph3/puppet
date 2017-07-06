@@ -6,7 +6,7 @@ class {'::rabbitmq':
 }
 rabbitmq_user {'joe':
 	admin => true,
-        password => 'kerangga',
+        password => 'password',
 }
 rabbitmq_user_permissions {'joe':
 	configure_permission => '.*',
