@@ -1,0 +1,19 @@
+node centos7-slave {
+include epel
+include staging
+class { '::rabbitmq':
+	service_manage  => false,
+	port   => '5672',
+	delete_guest_user => true,
+}
+rabbitmq_user{'joe':
+	admin => true,
+	password => 'kerangga',
+}
+rabbitmq_plugin{'rabbitmq_stomp':
+	ensure =>present,
+}
+}
+
+
+
